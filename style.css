@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+}
+body{
+     overflow: hidden;
+     /*overflow 속성은 over write 되는 박스 element 값을 제어할 수 있다. */
+}
+section {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     /*max-height CSS 속성은 요소의 최소 높이를 설정합니다.  min-height는 height 속성의 사용값이 자신의 값보다 작아지는걸 방지합니다.     min-height: 100vh;*/ 
+     background: linear-gradient(to bottom, #f1f4f9, #dff1ff)
+     
+}
+section .color {
+     position: absolute;
+     filter: blur(200px);
+}
+section .color:nth-child(1) {
+     top: -350px;
+     width: 600px;
+     height: 600px;
+     background: #ff359b;
+}
+section .color:nth-child(2) {
+     bottom: -150px;
+     left: 100px;
+     width: 500px;
+     height: 500px;
+     background: #fffd87;
+}
+section .color:nth-child(3) {
+     bottom: 50px;
+     right: 200px;
+     width: 300px;
+     height: 300px;
+     background: #7575ff;
+}
+section .container {
+     background-color: rgba(222, 222, 222, 0.5);
+     border:rgba(122, 122, 122, 0.9), solid, 3px;
+     border-radius: 5%;
+     padding: 1em;
+     z-index: 2;
+}
+section .container h2{
+     text-shadow: 3px 3px 3px rgba(1, 1, 1, 0.8);
+}
+section .container .inputBox{
+     
+}
