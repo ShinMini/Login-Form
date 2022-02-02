@@ -48,15 +48,57 @@ section .color:nth-child(3) {
 }
 .box .square {
      position: absolute;
-     backdrop-filter: blur(5px);
+     backdrop-filter: blur(8px);
      box-shadow: 0, 25px, 45px rgba(0, 0, 0, 0.1);
-     border: 1px solid rgba(255, 255, 255, 0.5);
-     border-right: 1px solid rgba(252, 252, 252, 0.2);
-     border-bottom: 1px solid rgba(252, 252, 252, 0.2);
+     border: 1px solid rgba(255, 255, 255, 0.3);
+     border-right: 1px solid rgba(252, 252, 252, 0.1);
+     border-bottom: 1px solid rgba(252, 252, 252, 0.1);
+     background: rgba(255, 255, 255, 0.1);
+	  border-radius: 10px;
+	  animation: animateBox 10s linear infinite;
+	  animation-delay: calc(-1s * var(--i));
+}
+@keyframes animateBox {
+	0%, 100% {
+		transform: translateY(-40px);
+	}
+	50%{
+		transform: translateY(40px);
+	}
 }
 .box .square:nth-child(1) {
-     top: -50px;
+     top: -70px;
+     right: -60px;
+     width: 150px;
+     height: 130px;
+	  z-index: 2;
 }
+.box .square:nth-child(2) {
+     top: 150px;
+     right: 375px;
+     width: 130px;
+     height: 120px;
+	  z-index: 2;
+}
+.box .square:nth-child(3) {
+     top: 410px;
+     right: 180px;
+     width: 200px;
+     height: 160px;
+}
+.box .square:nth-child(4) {
+     top: -40px;
+     right: 260px;
+     width: 100px;
+     height: 100px;
+}
+.box .square:nth-child(5) {
+     top: 250px;
+     right: -160px;
+     width: 80px;
+     height: 80px;
+}
+
 .container {
      position: relative;
      width: 400px;
