@@ -1,12 +1,67 @@
+:root {
+  --first-box-color: 0, 255, 255;
+  --second-box-color: 255, 105, 180;
+  --third-box-color: 0, 100, 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
    margin: auto;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
 }
 body {
-   margin: 0;
-   padding: 0;
+   background: linear-gradient(to bottom, rgba(100, 130, 170, 0.6), rgba(207, 125, 146, 0.7));
+   backdrop-filter: blur(40px);
+   min-height: 100vh;
+}
+section.backgroundBox {
+   position: absolute;
+   left: 25%;
+   top: 20%;
+   width: 25%;
+   height: 35%;
+   background-color: rgba(247, 205, 206, 0.8);
+   border-radius: 35%;
+   filter: blur(20px);
+   margin: auto ;
+}
+section.backgroundBox::after {
+   content: '';
+   position: absolute;
+   top: 70%;
+   right: 90%;
+   width: 70%;
+   height: 70%;
+   background-color: rgba(227, 125, 246, 0.8);
+   filter: blur(20px);
+   margin: auto;
+}
+section.backgroundBox::before{
+   content: '';
+   position: absolute;
+   top: 10%;
+   left: 70%;
+   width: 120%;
+   height: 120%;
+   background-color: rgba(127, 225, 146, 0.6);
+   border-radius: 35%;
+   filter: blur(20px);
+   margin: auto;
+}
+a {
+   text-decoration: none;
+   color:rgba(160, 190, 160, 0.9);
+   text-shadow: 2px 2px rgba(100, 130, 170, 0.8); 
+   
+}
+div.NavSection {
+    margin-top:1%;
+    display: absolute;
+    width: 100%;
+    justify-content: center;
 }
 nav.MainNavigation {
-   position: absolute;
+   position: relative;
    text-align: center;
 
    display: flex;
@@ -21,10 +76,97 @@ nav.MainNavigation {
    border-right: 3px solid rgba(50, 50, 50, 0.5);
    border-bottom:3px solid rgba(50, 50, 50, 0.5);
    border-radius: 15px;
-
-
 }
-ul li {
-   color: gray;
 
+section.buttonSection {
+   margin-top: 4%;
 }
+ul.btns{
+   position: relative;
+   display: flex;
+
+   justify-content: center;
+   align-items: center;
+
+   padding: 0%;
+   margin: auto;
+}
+/*  버튼 비활성화 */
+ul div{
+   padding: 1% 3%;
+   margin: 0% 1%;
+   border-bottom: 5px solid rgba(38, 32, 29, 0.9);
+   border-right: 5px solid rgba(38, 33, 29, 0.9);
+   border-radius: 15px;
+
+   color: rgba(50, 50, 50, 0.8);
+   cursor: pointer;
+   background-color: rgba(194, 255, 113, 0.767);
+   transition-delay: 1.5ms;
+}
+/* 버튼 활성화 */
+ul div.on {
+   color: black;
+   font-weight: 600;
+   background-color: rgb(169, 221, 84);
+
+   border-bottom: 2px solid rgba(68, 82, 29, 0.9); 
+   border-right: 2px solid rgba(44, 58, 26, 0.9);
+}
+
+ul div.on:nth-child(1) {
+   background-color: rgba(var(--first-box-color), 0.3);
+   }
+ul div.on:nth-child(2) {
+   background-color: rgba(var(--second-box-color), 0.5);
+   }
+ul div.on:nth-child(3) {
+   background-color: rgba(var(--third-box-color), 0.7);
+   }
+section.boxSection {
+   position: relative;
+   width: 50%;
+   height: 50vh;
+
+   margin-top: 5%;
+   position: relative;
+   perspective: 600px;  /*원근감 설정*/
+}
+/* 박스 기본설정*/
+section article {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+
+   top: 0px;
+   left: 0px;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   border: 1px solid rgba(44, 58, 26, 0.9);
+   border-radius: 15%;
+
+   color: #fff;
+   font-size: 50px;
+   opacity: 0;
+   transform: rotateY(-180deg);
+   transition: 0.5s;
+}
+/* ㅂ박스 활성화  */
+section article.on {
+   opacity: 1;
+   transform: rotateY(0deg);
+}
+/* ㅂ박스 순서별로 배경색 지정 */
+section article:nth-child(1) {
+   background-color: rgb(var(--first-box-color));
+}
+section article:nth-child(2) {
+   background-color: rgb(var(--second-box-color));
+}
+section article:nth-child(3) {
+   background-color: rgb(var(--third-box-color));
+}
+
