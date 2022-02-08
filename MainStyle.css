@@ -1,0 +1,30 @@
+*{
+   margin: auto;
+}
+body {
+   margin: 0;
+   padding: 0;
+}
+nav.MainNavigation {
+   position: absolute;
+   text-align: center;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   width: 95%;
+   height: 40px;
+
+   background-color: rgba(50, 50, 50, 0.4);
+   
+   border-right: 3px solid rgba(50, 50, 50, 0.5);
+   border-bottom:3px solid rgba(50, 50, 50, 0.5);
+   border-radius: 15px;
+
+
+}
+ul li {
+   color: gray;
+
+}
