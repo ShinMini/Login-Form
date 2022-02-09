@@ -1,14 +1,14 @@
 const http = require('http');
-
-const app = http.createServer((req, res) => {
-   let url = req.url;
-   if(req.url == '/'){
+const fs = require('fs');
+const app = http.createServer((request, response) => {
+   let url = request.url;
+   if(request.url == '/'){
       url = 'index.html';
    }
-   if(req.url == '/favicon.ico'){
-      return res.writeHead(404);
+   if(request.url == '/favicon.ico'){
+      return response.writeHead(404);
    }
-   res.writeHead(200);
-   res.end(fs.readFileSync(__dirname + url));
-})
+   response.writeHead(200);
+   response.end(fs.readFileSync(__dirname + url));
+});
 app.listen(3000);
