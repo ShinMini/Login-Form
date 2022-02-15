@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&family=Roboto:wght@100&family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+
+:root {
+--colorTheme: #F5EFE1;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html{
+  margin: 0;
+
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+section.container{
+   width: 100%;
+   min-height: 100vh;
+
+   background: linear-gradient(to top right, rgba(161, 62, 148, 0.295),rgba(115, 223, 111, 0.336));
+
+   transform-style: preserve-3d;
+
+   display: flex;
+   flex-direction: column;
+
+   justify-content: center;
+   align-items: center;
+
+   margin: auto;
+}
+
+div.face{
+   width: 50%;
+   height: 100%;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   padding: 3%;
+   margin-bottom: 4%;
+
+   backface-visibility: inherit;
+   border-radius: 15px;
+   
+   font-family:'Lora', 'Arial Narrow', Arial, sans-serif;
+   font-size: 3em;
+
+   color: rgba(100, 100, 100, .5);
+   background: linear-gradient(to top right, rgba(209, 209, 123, 0.295),rgba(129, 129, 83, 0.336));
+
+   border-top: 6px solid rgba(210, 210, 100, 0.6);
+   border-left: 3px solid rgba(210, 210, 100, 0.4);
+
+   transition-duration: 1.5s;
+
+   transform:rotateX(10deg);
+   perspective: 10px;
+
+   text-shadow: -2px -3px 3px rgba(105, 105, 105, 0.568);
+   
+   cursor: pointer;
+}
+div.face:hover {
+   letter-spacing: 4px;
+
+   padding-left: 1%;
+   padding-bottom: 1%;
+}
+div.face:hover::after {
+   letter-spacing: 4px;
+   transform: scale(1.1);
+
+   color: rgb(0, 0, 0);
+   background: linear-gradient(to top right, rgba(212, 118, 29, 0.623),rgba(92, 23, 2, 0.658));
+   border-top: 5px solid rgba(120, 110, 110, .9);
+   border-left: 3px solid rgba(120, 110, 120, .7);
+   font-size: 1.2em;
+}
+
+ div.face::after{
+   color: rgb(252, 252, 252);
+
+   background: linear-gradient(to top right, rgba(158, 158, 101, 0.6),rgba(75, 75, 51, 0.39));
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   width: 100%;
+
+   padding: 5%;
+   margin-bottom: 10%;
+   margin-left: 10%;
+
+   border-radius: 15px; 
+   border-top: 9px solid rgba(140, 140, 110, 0.418);
+   border-left: 6px solid rgba(150, 150, 120, 0.384);
+
+   position: absolute;
+
+   transition-duration: .5s;
+}
+ div.face:nth-child(1):after{
+    content:'Author';
+}
+ div.face:nth-child(2):after{
+    content:'Create';
+ }
+ div.face:nth-child(3):after{
+    content:'More...';
+ }
