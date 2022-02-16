@@ -1,14 +1,20 @@
+
 const create = document.querySelector('.create');
 
 
 
 const btns = document.querySelectorAll("section div.face");
 const containerBox = document.querySelectorAll("section.container");
+const pageList = [
+   './Author',
+    './Create',
+     './More'
+   ];
 
-   function BtnAddEvent(num) {
+function BtnAddEvent(num) {
       for (let i = 0; i < num; i++) {
          btns[i].addEventListener('click', (e) => {
-            window.location = this.href = './Main';
+            window.location = this.href = pageList[i];
          })
    }
 }
@@ -16,7 +22,6 @@ const containerBox = document.querySelectorAll("section.container");
 
 BtnAddEvent(btns.length);
 
-console.log(window.location.href);
 // for (let i = 0; i <= containerBox.lenght; i++) {
 //    //각 버튼을 클릭할 때마다.
 //    btns[i].addEventListener("click", (e) => {
