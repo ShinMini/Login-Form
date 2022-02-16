@@ -23,7 +23,7 @@ section .color {
      position: absolute;
      filter: blur(200px);
 }
-section .color:nth-child(1) {
+section .color:nth-child(1) 
      top: -350px;
      width: 600px;
      height: 600px;

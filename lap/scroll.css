@@ -18,7 +18,7 @@ body, html{
    overflow: hidden;
 }
 
-section.container{
+section.container.on{
    width: 100%;
    min-height: 100vh;
 
@@ -33,6 +33,12 @@ section.container{
    align-items: center;
 
    margin: auto;
+
+   visibility: inherit;
+}
+
+section.container {
+   visibility:hidden;
 }
 
 div.face{
@@ -66,6 +72,11 @@ div.face{
    text-shadow: -2px -3px 3px rgba(105, 105, 105, 0.568);
    
    cursor: pointer;
+}
+div.face:nth-child(1){
+   margin-right: 1%;
+}div.face:nth-child(3){
+   margin-left: 1%;
 }
 div.face:hover {
    letter-spacing: 4px;
@@ -114,4 +125,7 @@ div.face:hover::after {
  }
  div.face:nth-child(3):after{
     content:'More...';
+ }
+ div.on{
+    background-color: black;
  }
