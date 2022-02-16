@@ -157,7 +157,7 @@ section.home:hover{
 section.circle::before{
    content:'';
    position: absolute;
-   right: 105%;
+   right: 205px;
 
    width: 12px;
    height: 12px;
