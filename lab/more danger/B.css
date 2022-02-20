@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body {
+   display: flex;
+   justify-content: center;
+
+   background-color: rgba(153, 134, 194, 0.938);
+
+   margin: auto;
+}
+div.mainBlock div.Author-Container {
+   visibility: hidden;
+
+   transition-duration: 500ms;
+}
+div.mainBlock.Author div.Author-Container {
+   visibility: inherit;
+   display: flex;
+   background-color: rgba(100, 150, 100, .5);
+}
+
+div.dis-Main {
+   background-color: rgba(200, 140, 140, .5);
+}
+div.dis-Sub {
+   background-color: rgba(150, 150, 200 .7);
+}
