@@ -1,0 +1,52 @@
+div.mainBlock.Author div.author-container {
+   background-color:rgba(153, 134, 194, 0.445);
+
+   border: 4px solid pink;
+
+   background-image: url('./imgfile/building.jpg');
+   background-size: cover;
+   background-position: center;
+
+   transition-duration: 500ms;
+
+   min-height: 100vh;
+}
+div.mainBlock div.author-container{
+   visibility: hidden;
+}
+div.mainBlock.Author div.author-container{
+   justify-content: center;
+
+   width: 100%;
+   height: 100%;
+   visibility: inherit;
+
+   display: flex;
+
+   text-align: center;
+}
+
+
+img.seeMore {
+   position: relative;
+   width: 100%;
+   height: 0px;
+
+   background: rgba(31, 147, 255, 0.493);
+
+   border-radius: 25px;
+}
+div.dis-Main:hover {
+   cursor: pointer;
+}
+div.dis-Main:hover > img.seeMore {
+   display: flex;
+   height: 30px;
+}
+div.dis-Sub:hover {
+   cursor: pointer;
+}
+div.dis-Sub:hover > img.seeMore {
+   display: flex;
+   height: 30px;
+}

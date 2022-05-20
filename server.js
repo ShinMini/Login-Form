@@ -7,16 +7,16 @@ const app = http.createServer((request, response) => {
    if (request.url == '/') {
       url = '/index.html';
    }
-   if (request.url == '/Author') {
+   else if (request.url == '/Author') {
       url = '/Page/Author.html'
    }
-   if (request.url == '/Create') {
-      url = '/Page/create.html'
+   else if (request.url == '/Create') {
+      url = '/Page/Create.html'
    }
-   if (request.url == '/More') {
+   else if (request.url == '/More') {
       url = '/Page/More.html'
    }
-   if (request.url == '/favicon.ico') {
+   else if (request.url == '/favicon.ico') {
       return response.writeHead(404);
    }
    response.writeHead(200);

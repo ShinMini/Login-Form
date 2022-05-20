@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body {
+   display: flex;
+   justify-content: center;
+
+   background-color: rgba(20, 5, 53, 0.938);
+
+}
+
+section.main{
+   position: relative;
+
+   display: grid;
+   grid-template-rows: 1fr 4fr 1fr;
+
+   width: 80%;
+   min-height: 100vh;
+
+   font-family: 'Akaya Telivigala', cursive;
+
+   transition-duration: 1000ms;
+}
+
+.main div.introduce {
+   display: flex;
+   justify-content: center;
+
+   color: rgb(255, 253, 239);
+   text-shadow: -1px -1px 1px rgb(0, 0, 0);
+}
+
+section.main div.introduce h1 {
+   margin: 1%;
+   font-size: 3em;
+   letter-spacing: 4px;
+   font-family: 'Cabin', sans-serif;
+}
+section.main.Home div.introduce h1::before{
+   content: 'Home';
+}
+section.main.Author div.introduce h1::before{
+   content: 'Author';
+}
+section.main.Create div.introduce h1::before{
+   content: 'Create';
+}
+section.main.More div.introduce h1::before{
+   content: 'More';
+}
+section.main div.mainBlock{
+   z-index: 3;
+   position: relative;
+   
+   display: flex;
+   justify-content: center;
+
+   width: 100%;
+   min-height: 100vh;
+
+   background-color: rgba(240, 240, 245, 0.26);
+}
+.main div.mainBlock.Home{
+   background-color: rgba(211, 241, 75, 0.212);
+}
+.main div.mainBlock.Author{
+   background-color: rgba(149, 91, 197, 0.151);
+}
+.main div.mainBlock.Create{
+   background-color: rgba(87, 102, 238, 0.137);
+}
+
+.main div.mainBlock.More{
+   background-color: rgba(236, 117, 247, 0.219);
+}
+.main .mainBlock section.discover{
+   width: 90%;
+
+   margin-top: 2%;
+   padding: 5% auto;
+
+   background-color: rgba(118, 55, 170, 0.7);
+
+   border: 4px solid rgba(57, 1, 121, 0.9);
+   border-radius: 15px;
+
+   backdrop-filter: blur(15px);
+}
+
+
+.Author section.discover p.title {
+   width: 80%;
+   font-size: 3em;
+
+   margin: 1%;
+
+   color: #fff;
+   text-shadow: -2px -2px 1px #000;
+
+   background-color: rgba(54, 7, 116, 0.747);
+
+   border: 2px solid rgba(53, 10, 100, 0.7);
+   border-radius: 15px;
+
+}
+.Author section.discover p.title::before {
+   content: 'Discover';
+}
+
+.Author section.discover div.dis{
+   width: 40%;
+   height: 200px;
+
+   background-color: rgba(100, 150, 100, .8);
+
+   border: 2px solid rgb(100, 150, 100);
+   border-radius: 20px;
+
+   margin: 3% 1%;
+
+   transition-duration: 500ms;
+   perspective: 10px;
+}
+
+.Author section.discover div.dis:hover{
+   transform: scale(1.1, 1.1) translate(10px, 10px); 
+
+   background-color: rgba(57, 170, 214, 0.8);
+
+}
