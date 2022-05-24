@@ -1,26 +1,34 @@
-const http = require('http');
-const fs = require('fs');
+var http = require('http');
+var fs = require('fs');
+var url = require('url');  // 소스삽입. 
+
 const app = http.createServer((request, response) => {
+   var _url = request.url;
+   var queryData = url.parse(_url, true).query; // 소스 삽입. 
+   console.log(queryData);
+   console.log(_url);
 
-   let url = request.url;
-
-   if (request.url == '/') {
-      url = '/index.html';
-   }
-   else if (request.url == '/Author') {
-      url = '/Page/Author.html'
-   }
-   else if (request.url == '/Create') {
-      url = '/Page/Create.html'
-   }
-   else if (request.url == '/More') {
-      url = '/Page/More.html'
-   }
-   else if (request.url == '/favicon.ico') {
-      return response.writeHead(404);
-   }
+   switch (_url) {
+      case '/':
+         _url = '/index.html';
+         break;
+      case '/Author':
+         _url = '/Author.html';
+         break;
+      case '/Create':
+         _url = '/index.html';
+         break;
+      case '/favicon.ico':
+         response.writeHead(404);
+         response.end();
+         break;
+      default:
+         _url = '/index.html';
+         break;
+   };
    response.writeHead(200);
-   response.end(fs.readFileSync(__dirname + url));
+   response.end(fs.readFileSync(__dirname + _url)); // __dirname은 새로운 페이지를 요청할 때마다 읽어야할 파일위치를 반환해줌. 
 });
-app.listen(3000)
+app.listen(3000);
+
 console.log('Server running at http://127.0.0.1:3000/');
