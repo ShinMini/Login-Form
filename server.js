@@ -12,12 +12,6 @@ const app = http.createServer((request, response) => {
       case '/':
          _url = '/index.html';
          break;
-      case '/Author':
-         _url = '/Author.html';
-         break;
-      case '/Create':
-         _url = '/index.html';
-         break;
       case '/favicon.ico':
          response.writeHead(404);
          response.end();
